@@ -7,7 +7,7 @@ class Bird(Animal):
 
     def __init__(self, name, size, weight, sex, age, arrived, color, aviary):
         super().__init__(name, size, weight, sex, age, arrived)
-        self.__deathRate = 3;
+        self.deathRate = 3;
         self.__color = color
         self.__aviary = aviary
 
@@ -33,7 +33,7 @@ class Bird(Animal):
         return self.age * 7.62;
 
     def Crier(self):
-        print("Cui cui")
+        return "Cui cui"
 
     def __str__(self) -> str:
         voliere = "necessite une" if self.aviary else "ne necessite pas de"

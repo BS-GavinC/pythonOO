@@ -60,6 +60,10 @@ class Animal:
     def deathRate(self):
         return self.__deathRate;
 
+    @deathRate.setter
+    def deathRate(self, value):
+        self.__deathRate = value;
+
     @property
     def isDead(self):
         return self.__isDead;
@@ -68,8 +72,8 @@ class Animal:
     def isDead(self, value):
         self.__isDead = value;
 
-    def Crier(self):
-        print("Son commun d'un animal inidentifiable.")
+    def Crier(self) -> str:
+        return "Son commun d'un animal inidentifiable."
 
     def __str__(self) -> str:
         return f"il s'appelle {self.name}, il fait {self.size} cm et {self.weight} Kg. \n C'est un {self.sex} de {self.age} ans ({self.humanAge} années humaines). il est arrivé le {self.arrived}"

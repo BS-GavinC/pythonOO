@@ -7,7 +7,7 @@ class Dog(Animal):
 
     def __init__(self, name, size, weight, sex, age, arrived, collarColor, race, trained):
         super().__init__(name, size, weight, sex, age, arrived)
-        self.__deathRate = 1
+        self.deathRate = 1
         self.__collarColor = collarColor
         self.__race = race
         self.__trained = trained
@@ -37,7 +37,7 @@ class Dog(Animal):
         return self.age * 7;
 
     def Crier(self):
-        print("Wouf Wouf")
+        return "Wouf Wouf"
 
     def __str__(self) -> str:
         train = "il est entrainé" if self.trained else "il n'est pas entrainé"

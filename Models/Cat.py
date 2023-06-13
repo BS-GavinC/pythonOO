@@ -6,7 +6,7 @@ class Cat(Animal):
 
     def __init__(self, name, size, weight, sex, age, arrived, personnality, clawCut, longHair):
         super().__init__(name, size, weight, sex, age, arrived)
-        self.__deathRate = 0.5
+        self.deathRate = 0.5
         self.__personnality = personnality
         self.__clawCut = clawCut
         self.__longHair = longHair
@@ -36,7 +36,7 @@ class Cat(Animal):
         return self.age * 11;
 
     def Crier(self):
-        print("Miaouw Miaouw")
+        return "Miaouw Miaouw"
 
     def __str__(self) -> str:
         claw = "il a les griffes coupées" if self.clawCut else "il n'a pas les griffes coupées"
